@@ -1,6 +1,6 @@
-# Dotnet-9-CQRS-WebApi
+# Dotnet-10-CQRS-WebApi
 
-Dotnet new template for Dotnet 9 CQRS WebApi with the following features: 
+Dotnet new template for Dotnet 10 CQRS WebApi with the following features:
 
 * Aspire
   * OpenTelemetry
@@ -40,7 +40,7 @@ Dotnet new template for Dotnet 9 CQRS WebApi with the following features:
 8. Ensure you are using the Aspire https run configuration
    * Alternatively, you can run `dotnet run --project infra/AppHost` from the solution root directory.
 
-If you include the example project, everything should work as expected. 
+If you include the example project, everything should work as expected.
 You will see the Aspire dashboard open on your browser with the following:
 
 * Postgres
@@ -50,21 +50,21 @@ You will see the Aspire dashboard open on your browser with the following:
 
 ## CQRS Onion Architecture Overview
 
-The basic idea of CQRS in simple terms is a loosely coupled architecture. 
+The basic idea of CQRS in simple terms is a loosely coupled architecture.
 The layers do the following:
 
 - Domain: processes business logic and ensures objects are valid
-- Application: maps/translates external requests (API requests) into 
+- Application: maps/translates external requests (API requests) into
 domain models and calls the infrastructure layer's persistence services to persist data.
-- Infrastructure: manages external dependencies, such as database 
+- Infrastructure: manages external dependencies, such as database
 connections, requests to other services (e.g. API requests to other services, such as an email API), etc.
-- Presentation: interacts with inbound requests to the service. 
-In this case, a Dotnet 8 Minimal API.
+- Presentation: interacts with inbound requests to the service.
+In this case, a Dotnet 10 Minimal API.
 
 <div align="center">
   <img alt="CQRS Onion" src="https://miro.medium.com/v2/resize:fit:1400/1*8eY3hTiNEWffynPPLqqZmw.jpeg" width="300" />
 </div>
 
-In this template, I have also included a Migrator project, 
-which is responsible for creating and updating the database schema, 
+In this template, I have also included a Migrator project,
+which is responsible for creating and updating the database schema,
 and 2 Aspire related projects.
